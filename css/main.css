@@ -1,0 +1,430 @@
+/* CSS reset
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Animate.css
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@charset "UTF-8";
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+Copyright (c) 2015 Daniel Eden
+*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.animated.bounceIn,
+.animated.bounceOut {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+}
+
+@-webkit-keyframes slideInDown {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+/*  padding: 0 20px;*/
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 100%;
+    padding: 0; }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 100%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+
+/******************************************
+*******************************************
+CUSTOM CSS
+*******************************************
+******************************************/
+
+/*
+
+Head type:
+
+font-family: 'Lato', sans-serif;
+
+Body type:
+
+font-family: 'Roboto Slab', serif;
+
+
+COLORS
+
+Green color: #2a4b2e
+Yellow color: #f7a100
+*/
+
+
+/******************************************
+BASE STYLES
+******************************************/
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 16px;
+  font-family: 'Roboto Slab', serif;
+  line-height: 1.2rem;
+}
+
+a {
+  color: #f7a100;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  transition: all .4s ease-in-out;
+}
+
+a:hover {
+  color: #2A4B2E;
+}
+
+.green {
+  color: #2a4b2e;
+}
+
+.yellow {
+  color: #f7a100;
+}
+
+/******************************************
+HEADER
+******************************************/
+
+header {
+  width: 100%;
+  margin: 0 auto 2rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  text-align: center;
+}
+
+/*header a {
+  font-weight: initial;
+}*/
+
+header .logo > *,
+header > * {
+  padding: .4rem;
+}
+
+header ul li,
+footer ul li {
+  display: inline;
+}
+
+header li:first-child::after,
+footer li:first-child::after {
+  content: " | ";
+}
+
+header li:first-child::after {
+  color: #2a4b2e;
+}
+
+/*header .logo {
+  text-align: center;
+}*/
+
+header .logo img {
+  max-width: 10rem;  
+  transition: all .2s ease-in-out;
+}
+
+header .logo img:hover {
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.2)); 
+  filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.2));
+}
+
+header .logo h1 a {
+  font-family: 'Lato', cursive;
+  font-weight: 300;
+  font-size: 7vw;
+  text-transform: uppercase;
+  letter-spacing: 1.4vw;
+}
+
+header .logo h2 a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0rem;
+  font-size: 2.2vmax;
+}
+
+
+/******************************************
+DYNAMIC CONTENT (posts, sidebar, etc)
+******************************************/
+
+.dynamic {
+  color: #3d3d3d;
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 16rem;
+}
+
+.dynamic .posts > * {
+  margin-bottom: .8rem;
+}
+
+.dynamic .posts h1 {
+  font-weight: 700;
+  font-size: 4.8vmax;
+}
+
+.dynamic .posts h2 {
+  font-weight: 400;
+  font-size: 2.5vmax;
+}
+
+
+
+/******************************************
+FOOTER
+******************************************/
+
+footer {
+  background-color: #2a4b2e;
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+
+footer nav a:hover,
+footer #copyright a:hover {
+  color: #fff;
+}
+
+footer section > * {
+  margin: .4rem auto;
+}
+
+footer #copyright p {
+  font-family: 'Lato', sans-serif;
+  font-size: .8rem;
+}
+
