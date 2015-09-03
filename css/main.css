@@ -274,6 +274,11 @@ Yellow color: #f7a100
 BASE STYLES
 ******************************************/
 
+html,
+body {
+  height: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -350,6 +355,7 @@ header li:first-child::after {
 header .logo img {
   max-width: 10rem;  
   transition: all .2s ease-in-out;
+  margin-bottom: .8rem;
 }
 
 header .logo img:hover {
@@ -380,9 +386,10 @@ DYNAMIC CONTENT (posts, sidebar, etc)
 .dynamic {
   color: #3d3d3d;
   width: 90%;
+  min-height: 100%;
   margin: 0 auto;
   font-family: 'Roboto Slab', serif;
-  margin-bottom: 16rem;
+  
 }
 
 .dynamic .posts > * {
@@ -399,6 +406,12 @@ DYNAMIC CONTENT (posts, sidebar, etc)
   font-size: 2.5vmax;
 }
 
+.sidebar {
+  background-color: rgba(247, 161, 0, .1);
+  border-radius: .6rem .8rem;
+  padding: 1rem;
+}
+
 
 
 /******************************************
@@ -413,6 +426,15 @@ footer {
   color: #fff;
 }
 
+footer img {
+  max-width: 1.2rem;
+}
+
+footer img:hover {
+    -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 
 footer nav a:hover,
 footer #copyright a:hover {
@@ -420,7 +442,7 @@ footer #copyright a:hover {
 }
 
 footer section > * {
-  margin: .4rem auto;
+  margin: .2rem auto;
 }
 
 footer #copyright p {
